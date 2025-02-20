@@ -27,6 +27,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header>Menu compartilhado com as subrotas static</header>
         {children}
       </body>
     </html>
