@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,7 +28,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header>Menu compartilhado com as subrotas static</header>
+        <header>
+          <ul className="flex space-x-4">
+            <li>
+              <Link href="/" title="página Principal">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" title="página sobre">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/imc" title="página para calcular IMC">
+                IMC
+              </Link>
+            </li>
+          </ul>
+        </header>
         {children}
       </body>
     </html>
