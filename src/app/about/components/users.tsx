@@ -7,7 +7,13 @@ export const metadata: Metadata = {
 };
 const Users = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
-  const users = await res.json();
+  const users: [
+    {
+      id: number;
+      name: string;
+      email: string;
+    }
+  ] = await res.json();
   return (
     <div>
       <h1>Usuários</h1>
